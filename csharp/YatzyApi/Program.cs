@@ -5,7 +5,7 @@ var app = builder.Build();
 IYatzyService _service = new YatzyService();
 YatzyEngineInterface _engine = new YatzyEngine(_service);
 
-app.MapPost("/evaluate",   (YatzyQuery query) =>  _engine.get_evaluator(query.type.ToLower();
+app.MapPost("/evaluate",   (YatzyQuery query) =>  _engine.get_evaluator(query.type.ToLower()));
 app.MapGet("/roll",   () => _engine.Roll());
 app.MapGet("/play",   () => _engine.PlayARound());
 app.MapGet("/try/{mode}",   (string mode) => _engine.TryAMode(mode));
