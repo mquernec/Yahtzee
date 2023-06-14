@@ -1,7 +1,7 @@
 ﻿using  Yatzy;
 namespace Yatzy.Engine;
 
-public class  YatzyEngine:IYatzyEngine
+public class  YatzyEngine:YatzyEngineInterface
 {
 
 public string[] Roll()=> Roll(6);
@@ -11,28 +11,28 @@ private Dictionary<string,Func <int[],int>>  Evaluators =  new();
 public YatzyEngine( IYatzyService  service)
 {    
   _service = service;
-    Evaluators.Add( "Chance",       _service.Chance);
-	Evaluators.Add( "Yatzee",       _service.Yatzee);
-	Evaluators.Add( "Ones",         _service.Ones);
-	Evaluators.Add( "Twos",         _service.Twos);
-	Evaluators.Add( "Threes",       _service.Threes);
-	Evaluators.Add( "Fours",        _service.Fours);
-	Evaluators.Add( "Fives",        _service.Fives);
-	Evaluators.Add( "Sixes",        _service.Sixes);
-	Evaluators.Add( "Pair",         _service.Pair);
-	Evaluators.Add( "TwoPair",      _service.TwoPair);
-	Evaluators.Add( "FourOfAKind", _service.FourOfAKind);
-	Evaluators.Add( "ThreeOfAKind", _service.ThreeOfAKind);
-	Evaluators.Add( "SmallStraight",_service.SmallStraight);
-	Evaluators.Add( "LargeStraight",_service.LargeStraight);
-	Evaluators.Add( "FullHouse",    _service.FullHouse);
+    Evaluators.Add( "chance",       _service.Chance);
+	Evaluators.Add( "yatzee",       _service.Yatzee);
+	Evaluators.Add( "ones",         _service.Ones);
+	Evaluators.Add( "twos",         _service.Twos);
+	Evaluators.Add( "threes",       _service.Threes);
+	Evaluators.Add( "fours",        _service.Fours);
+	Evaluators.Add( "fives",        _service.Fives);
+	Evaluators.Add( "sixes",        _service.Sixes);
+	Evaluators.Add( "pair",         _service.Pair);
+	Evaluators.Add( "twopair",      _service.TwoPair);
+	Evaluators.Add( "fourofakind", _service.FourOfAKind);
+	Evaluators.Add( "threeofakind", _service.ThreeOfAKind);
+	Evaluators.Add( "smallstraight",_service.SmallStraight);
+	Evaluators.Add( "largestraight",_service.LargeStraight);
+	Evaluators.Add( "fullhouse",    _service.FullHouse);
 
     }
    public Func<int[],int> get_evaluator(string typeName)
    {
-    if ( Evaluators.HasKeys(typeName))
+    if ( Evaluators.ContainsKey(typeName.ToLower()))
     {
-          return Evaluators[typeName];
+          return Evaluators[typeName.ToLower()];
     }
    return null;
    }
