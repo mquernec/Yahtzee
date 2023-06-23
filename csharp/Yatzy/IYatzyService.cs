@@ -14,4 +14,5 @@ public interface IYatzyService {
 	int SmallStraight(int[] faces);
 	int LargeStraight(int[] faces);
 	int FullHouse(int[] faces);
+	bool Validate(int[] faces, int poolSize, int maxValue);
 }

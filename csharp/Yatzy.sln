@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yatzy", "Yatzy\Yatzy.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yatzy.Test", "Yatzy.Test\Yatzy.Test.csproj", "{C693DAA6-72AE-4BC1-8432-099F95BB992C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yatzy.Engine", "Yatzy.Engine\Yatzy.Engine.csproj", "{21675AB6-E1B6-46D0-8638-277308BE605D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YatzyApi", "YatzyApi\YatzyApi.csproj", "{27B99D6E-7032-4ABD-8F83-89B9DAE3303D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C693DAA6-72AE-4BC1-8432-099F95BB992C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C693DAA6-72AE-4BC1-8432-099F95BB992C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C693DAA6-72AE-4BC1-8432-099F95BB992C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21675AB6-E1B6-46D0-8638-277308BE605D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21675AB6-E1B6-46D0-8638-277308BE605D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21675AB6-E1B6-46D0-8638-277308BE605D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21675AB6-E1B6-46D0-8638-277308BE605D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B99D6E-7032-4ABD-8F83-89B9DAE3303D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B99D6E-7032-4ABD-8F83-89B9DAE3303D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B99D6E-7032-4ABD-8F83-89B9DAE3303D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B99D6E-7032-4ABD-8F83-89B9DAE3303D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
